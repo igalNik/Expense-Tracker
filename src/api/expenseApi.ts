@@ -9,7 +9,7 @@ export const fetchAllExpenses = async () => {
 };
 
 export const addExpense = async (expense: {
-  title: string;
+  description: string;
   amount: number;
 }) => {
   const res = await fetch(`${Base_URL}/expenses`, {

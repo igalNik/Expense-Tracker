@@ -95,7 +95,9 @@ export const getAllExpenses = createAsyncThunk<
   { rejectValue: string }
 >("expense/getAllExpenses", async (_, { rejectWithValue }) => {
   try {
-    return await api.fetchAllExpenses();
+    const x = await api.fetchAllExpenses();
+    console.log(x);
+    return x;
   } catch (err) {
     const error = err as Error;
     return rejectWithValue(error.message);
